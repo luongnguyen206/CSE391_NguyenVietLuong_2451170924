@@ -29,17 +29,11 @@ Nên thay thế thành:
 - `<figure>`
 
 ## Câu A3: (Tài liệu: 04_visible_part_html.md)
-┌─────────────────────────┐
-│ Hộp 1                   │
-└─────────────────────────┘
+[Hộp 1]
 Text A Text B
-┌─────────────────────────┐
-│ Hộp 2                   │
-└─────────────────────────┘
+[Hộp 2]
 Text C Text D
-┌─────────────────────────┐
-│ Hộp 3                   │
-└─────────────────────────┘
+[Hộp 3]
 - `<div>` là 1 thẻ thuộc Block element vì vậy khi kết thúc thẻ sẽ xuống 1 dòng mới.
 - `<span>` và `<strong>` là 2 thẻ thuộc Inline element vì vậy khi kết thúc thẻ thì vẫn sẽ nằm trên dòng đó không xuống dòng mới.
 
@@ -60,7 +54,7 @@ Các lỗi có trong bài là:
 - `<title>Trang web`ở dòng 139 thiếu thẻ đóng title -> Sửa thành `<title>Trang web</title>`.
 - `<h1>Welcome to ShopTLU<h1>` ở dòng 143 thẻ đóng bị sai -> Sửa thành `<h1>Welcome to ShopTLU</h1>`.
 - `<a href="home">Trang chủ<a>` ở dòng 147 thẻ đóng bị sai -> Sửa thành `<a href="home">Trang chủ</a>`.
-- `<img src=iphone.jpg>` ở dòng 155 sau phần src= thiếu dấu ngoặc kép -> Sửa thành `<img src="iphone.jpg">.
+- `<img src=iphone.jpg>` ở dòng 155 sau phần src= thiếu dấu ngoặc kép -> Sửa thành `<img src="iphone.jpg">`.
 - `<p>Giá: <b>25.990.000đ</p></b>` ở dòng 157 để sai vị trí thẻ đóng của thẻ `<b>` -> Sửa thành `<p>Giá: <b>25.990.000đ</b></p>`.
 - Từ dòng 162 đến 170 Table nên sửa dụng 2 thẻ `<thead>` và `<tbody>`.
 - `<td>` từ dòng 164 trong Table nên thay `<td>` thành `<th>`.
