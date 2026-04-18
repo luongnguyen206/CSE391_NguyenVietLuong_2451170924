@@ -29,11 +29,13 @@ Nên thay thế thành:
 - `<figure>`
 
 ## Câu A3: (Tài liệu: 04_visible_part_html.md)
+```html
 [Hộp 1]
 Text A Text B
 [Hộp 2]
 Text C Text D
 [Hộp 3]
+```
 - `<div>` là 1 thẻ thuộc Block element vì vậy khi kết thúc thẻ sẽ xuống 1 dòng mới.
 - `<span>` và `<strong>` là 2 thẻ thuộc Inline element vì vậy khi kết thúc thẻ thì vẫn sẽ nằm trên dòng đó không xuống dòng mới.
 
