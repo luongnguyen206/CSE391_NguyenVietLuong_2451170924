@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Tìm kiếm sản phẩm</label>
+    <input list="products" placeholder="Nhập tên sản phẩm...">
+    <datalist id="products">
+        <option value="iPhone 16 Pro Max">
+        <option value="iPhone 16">
+        <option value="iPhone 16 Plus">
+    </datalist>
+
+    <h2>Giỏ hàng</h2>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Sản phẩm</th>
+            <th>Đơn giá</th>
+            <th>Số lượng</th>
+            <th>Thành tiền</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>iPhone 16 Pro Max</td>
+            <td>25.990.000đ</td>
+            <td>1</td>
+            <td>25.990.000đ</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>iPhone 16</td>
+            <td>21.990.000đ</td>
+            <td>2</td>
+            <td>43.980.000đ</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>iPhone 16 Plus</td>
+            <td>23.990.000đ</td>
+            <td>1</td>
+            <td>23.990.000đ</td>
+        </tr>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td colspan="4"><strong>Tổng cộng</strong></td>
+            <td><output>93.960.000đ</output></td>
+        </tr>
+        </tfoot>
+    </table>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Phương thức thanh toán</legend>
+
+            <label>
+                <input type="radio" name="payment" value="cod" required>
+                COD
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="bank">
+                Chuyển khoản
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="ewallet">
+                Ví điện tử
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mã giảm giá</legend>
+            <label for="sale">Nhập mã:</label>
+            <input type="text" id="sale" name="sale"
+                pattern="(SALE)[0-9]{4}"
+                placeholder="SALE2026"
+                title="Format: SALE + 4 chữ số">
+
+            <label for="note">Ghi chú:</label>
+            <textarea name="note" id="note" rows="4" placeholder="Ghi chú đơn hàng"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Thông tin giao hàng</legend>
+
+            <label for="city">Thành phố:</label>
+            <select id="city" name="city" required aria-placeholder="Chọn thành phố">
+                <option value="">--Chọn thành phố--</option>
+                <option value="HaNoi">Hà Nội</option>
+                <option value="HoChiMinh">TP. Hồ Chí Minh</option>
+                <option value="DaNang">Đà Nẵng</option>
+                <option value="HaiPhong">Hải Phòng</option>
+                <option value="CanTho">Cần Thơ</option>
+            </select>
+
+            <label for="district">Quận/Huyện:</label>
+            <select id="district" name="district" required>
+                <option value="">--Chọn quận/huyện--</option>
+                <option value="dist1">Quận Hà Đông (Hà Nội)</option>
+                <option value="dist2">Quận 2 (Hà Nội)</option>
+            </select>
+
+            <label for="address">Địa chỉ chi tiết:</label>
+            <textarea name="address" id="address" rows="3" placeholder="Nhập địa chỉ chi tiết" required></textarea>
+
+            <label>Giới tính:</label>
+            <label>
+                <input type="radio" name="gender" value="male">Nam
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female">Nữ
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other">Khác
+            </label>
+            <div>
+                <label for="date_giaohang">Thời gian giao hàng mong muốn:</label>
+                <input type="date" name="date_giaohang" id="date_giaohang" min="2024-05-01" required>
+
+                <label for="khungGio_GiaoHang">Giờ giao hàng mong muốn:</label>
+                <select name="khungGio_GiaoHang" id="khungGio_GiaoHang" required>
+                    <option value="">--Chọn khung giờ--</option>
+                    <option value="morning">Sáng 8:00 - 12:00</option>
+                    <option value="afternoon">Chiều 14:00 - 18:00</option>
+                    <option value="evening">Tối 18:00 - 21:00</option>
+                </select>
+
+                <label for="time_giaohang">Thời gian giao hàng:</label>
+                <input type="range" name="time_giaohang" id="time_giaohang" min="1" max="7" step="1" title="ngày" value="3">
+                <output id="output_days">3 ngày</output>
+            </div>
+        </fieldset>
+
+        <button type="submit">Xác nhận đặt hàng</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
