@@ -1,0 +1,29 @@
+/* (1) 0,0,1 */
+p { color: black; }
+
+/* (2) 0,0,2 */
+p::first-letter { color: brown; }
+
+/* (3) 0,1,0 */
+.text { color: blue; }
+
+/* (4) 0,1,1 */
+p.text { color: green; }
+
+/* (5) 0,2,0 */
+.text.highlight { color: purple; }
+
+/* (6) 0,2,1 */
+p.text.highlight { color: pink; }
+
+/* (7) 1,0,0 */
+#demo { color: red; }
+
+/* (8) 1,0,1 */
+p#demo { color: orange; }
+
+/* (9) 1,1,0 */
+#demo.highlight { color: teal; }
+
+/* (10) 1,1,1 */
+p#demo.highlight { color: gold; }
