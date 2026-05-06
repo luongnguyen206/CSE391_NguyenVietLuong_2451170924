@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px 0;
+    position: sticky;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration:  underline;
+}
+
+nav .active {
+    background-color: white;
+    color: #667eea;
+    text-decoration: none;
+}
+
+#home {
+    margin: 40px;
+}
+
+#about {
+    background-color: #c4bcbc41;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+#skill {
+    margin: 40px;
+}
+
+#contact {
+    margin: 40px;
+}
+
+#skill h2 + .skills-table {
+    margin-top: 20px;
+}
+
+.skills-table {
+    border-collapse: collapse;
+    border: 2px solid #667eea;
+}
+
+.skills-table thead {
+    background-color: #667eea;
+    color: white;
+}
+
+.skills-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-align: center;
+}
+
+.skills-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.skills-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.skills-table tbody tr:hover {
+    background-color: #f0e6ff;
+}
+
+footer {
+    background-color:rgba(25, 20, 36, 0.87);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
