@@ -21,27 +21,34 @@
 Có: 1 hàng, 4 cột đều nhau
 
 - Trường hợp 2: `flex-wrap: wrap; width: 45%; margin: 2.5%;` (6 items)
+```
 ┌────────────────────────────────┐
 │  Item1 (45%)  │  Item2 (45%)  │
 │  Item3 (45%)  │  Item4 (45%)  │
 │  Item5 (45%)  │  Item6 (45%)  │
 └────────────────────────────────┘
+```
 Có: 3 hàng, 2 cột
 
 - Trường hợp 3: `justify-content: space-between; align-items: center;` (3 items)
+```
 ┌────────────────────────────────┐
 │ Item1        Item2        Item3 │
 └────────────────────────────────┘
+```
 Có: 1 hàng, Item1 trái, Item2 giữa, Item3 phải, tất cả căn giữa dọc
 
 - Trường hợp 4: `grid-template-columns: 200px 1fr 200px;` (3 items)
+```
 ┌─────────┬──────────────┬─────────┐
 │200px    │   flex       │  200px  │
 │ Item1   │    Item2     │  Item3  │
 └─────────┴──────────────┴─────────┘
+```
 Có: 1 hàng, 3 cột: cột 1 và 3 cố định 200px, cột 2 co giãn
 
 - Trường hợp 5: `grid-template-columns: repeat(3, 1fr); gap: 10px;` (7 items)
+```
 ┌───────────┬───────────┬───────────┐
 │  Item1    │  Item2    │  Item3    │
 ├───────────┼───────────┼───────────┤
@@ -49,6 +56,7 @@ Có: 1 hàng, 3 cột: cột 1 và 3 cố định 200px, cột 2 co giãn
 ├───────────┼───────────┼───────────┤
 │  Item7    │           │           │
 └───────────┴───────────┴───────────┘
+```
 Có: 3 hàng, 3 cột (item cuối ở cột 1 hàng 3, hai ô còn lại trống)
 
 # Phần C - SUY LUẬN
