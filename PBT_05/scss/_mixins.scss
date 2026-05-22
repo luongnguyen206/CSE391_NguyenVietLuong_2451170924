@@ -1,0 +1,55 @@
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'sm' {
+        @media (min-width: $breakpoint-sm) { @content; }
+    }
+    @else if $breakpoint == 'md' {
+        @media (min-width: $breakpoint-md) { @content; }
+    }
+    @else if $breakpoint == 'lg' {
+        @media (min-width: $breakpoint-lg) { @content; }
+    }
+    @else if $breakpoint == 'xl' {
+        @media (min-width: $breakpoint-xl) { @content; }
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-shadow {
+    box-shadow: $shadow-md;
+    border-radius: $radius-md;
+}
+
+@mixin smooth-transition($properties: all) {
+    transition: $properties $transition-normal;
+}
+
+@mixin gradient-bg($from, $to, $angle: 135deg) {
+    background: linear-gradient($angle, $from, $to);
+}
+
+@mixin truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin btn-reset {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

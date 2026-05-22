@@ -1,0 +1,137 @@
+@import 'variables';
+
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    font-family: $font-primary;
+    background-color: $bg-light;
+    color: $text-dark;
+    line-height: 1.6;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    @include smooth-transition;
+
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $text-dark;
+    font-weight: 600;
+    margin-bottom: $spacing-md;
+}
+
+h1 { font-size: $font-size-xl; }
+h2 { font-size: 20px; }
+h3 { font-size: $font-size-lg; }
+
+// 4. Components
+@import 'components';
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.flex-center {
+    @include flex-center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.rounded {
+    border-radius: $radius-md;
+}
+
+@include respond-to('md') {
+    .d-md-flex {
+        display: flex;
+    }
+
+    .d-md-none {
+        display: none;
+    }
+}
+
+@include respond-to('lg') {
+    .d-lg-flex {
+        display: flex;
+    }
+
+    .d-lg-none {
+        display: none;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-slide-in {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
