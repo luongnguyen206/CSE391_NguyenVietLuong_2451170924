@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions & Animations</title>
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Transitions & Animations Demo</h1>
+
+        <!-- 1. Card Hover Effect -->
+        <section>
+            <h2>1. Card Hover Effect</h2>
+            <div class="card-demo">
+                <div class="card">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='150'%3E%3Crect fill='%23667eea' width='200' height='150'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='16' fill='white'%3EProduct Card%3C/text%3E%3C/svg%3E" alt="Product">
+                    <h3>Laptop Pro</h3>
+                    <p>Giá: 25.990.000đ</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Button Hover -->
+        <section>
+            <h2>2. Button Hover Effect</h2>
+            <button class="btn btn-primary">Mua ngay</button>
+            <button class="btn btn-secondary">Xem chi tiết</button>
+        </section>
+
+        <!-- 3. Image Zoom -->
+        <section>
+            <h2>3. Image Zoom on Hover</h2>
+            <div class="image-zoom-container">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='200'%3E%3Crect fill='%23f0ad4e' width='250' height='200'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='white'%3EHover để zoom%3C/text%3E%3C/svg%3E" alt="Zoom Image">
+            </div>
+        </section>
+
+        <!-- 4. Loading Spinner -->
+        <section>
+            <h2>4. Loading Spinner Animation</h2>
+            <div class="spinner"></div>
+            <p style="text-align: center; margin-top: 20px;">Đang tải...</p>
+        </section>
+
+        <!-- 5. Fade-in Animation -->
+        <section>
+            <h2>5. Fade-in Animation</h2>
+            <div class="fade-in-box">
+                <h3>Hộp fadeIn</h3>
+                <p>Phần tử này xuất hiện khi trang load (hoặc scroll tới).</p>
+            </div>
+            <div class="fade-in-box" style="animation-delay: 0.2s;">
+                <h3>Hộp fadeIn 2</h3>
+                <p>Có delay 0.2s</p>
+            </div>
+            <div class="fade-in-box" style="animation-delay: 0.4s;">
+                <h3>Hộp fadeIn 3</h3>
+                <p>Có delay 0.4s</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
