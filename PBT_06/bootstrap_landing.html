@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .carousel-img {
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .product-img {
+            height: 200px;
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sản phẩm</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+            </ul>
+            <form class="d-flex ms-3">
+                <input class="form-control form-control-sm me-2" type="search" placeholder="Tìm...">
+                <button class="btn btn-light btn-sm" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <a href="#" class="btn btn-light btn-sm ms-2"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO CAROUSEL -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-img"></div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Khám phá bộ sưu tập mới</h5>
+                <p>Giảm giá lên đến 50%</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Thời trang hè</h5>
+                <p>Thiết kế độc đáo</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Miễn phí vận chuyển</h5>
+                <p>Với tất cả đơn hàng</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PRODUCT SECTION -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Sản phẩm</h2>
+        <div class="row g-3">
+            <!-- Product 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="position-relative">
+                        <div class="product-img" style="background: #f093fb;"></div>
+                        <span class="badge bg-danger position-absolute top-0 end-0 m-2">Sale</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Áo phông</h5>
+                        <p class="card-text">199,000 VND</p>
+                        <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#productModal1">
+                            <i class="fas fa-eye"></i> Xem nhanh
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="product-img" style="background: #667eea;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Quần jean</h5>
+                        <p class="card-text">450,000 VND</p>
+                        <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#productModal2">
+                            <i class="fas fa-eye"></i> Xem nhanh
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="product-img" style="background: #4facfe;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Giày sneaker</h5>
+                        <p class="card-text">599,000 VND</p>
+                        <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#productModal3">
+                            <i class="fas fa-eye"></i> Xem nhanh
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="product-img" style="background: #fa709a;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Túi xách</h5>
+                        <p class="card-text">749,000 VND</p>
+                        <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#productModal4">
+                            <i class="fas fa-eye"></i> Xem nhanh
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="product-img" style="background: #30cfd0;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Áo khoác</h5>
+                        <p class="card-text">899,000 VND</p>
+                        <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#productModal5">
+                            <i class="fas fa-eye"></i> Xem nhanh
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="position-relative">
+                        <div class="product-img" style="background: #a8edea;"></div>
+                        <span class="badge bg-danger position-absolute top-0 end-0 m-2">-40%</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mũ lưỡi trai</h5>
+                        <p class="card-text">89,000 VND</p>
+                        <button class="btn btn-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#productModal6">
+                            <i class="fas fa-eye"></i> Xem nhanh
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MODALS -->
+<div class="modal fade" id="productModal1" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Áo phông</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Áo phông basic - Chất lượng tốt - 199,000 VND</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="productModal2" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Quần jean</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Quần jean xanh - Kiểu dáng đẹp - 450,000 VND</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="productModal3" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Giày sneaker</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Giày sneaker trắng - Thoải mái - 599,000 VND</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="productModal4" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Túi xách</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Túi xách nữ - Sang trọng - 749,000 VND</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="productModal5" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Áo khoác</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Áo khoác gió - Chống nước - 899,000 VND</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="productModal6" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mũ lưỡi trai</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Mũ lưỡi trai - Thể thao - 89,000 VND</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5>Công ty</h5>
+                <p>Cửa hàng bán lẻ trực tuyến hàng đầu</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5>Danh mục</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white-50 text-decoration-none">Quần áo</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Giày</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5>Chính sách</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white-50 text-decoration-none">Bảo mật</a></li>
+                    <li><a href="#" class="text-white-50 text-decoration-none">Điều khoản</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <h5>Liên hệ</h5>
+                <p class="text-white-50">Email: info@shop.com</p>
+                <p class="text-white-50">Điện thoại: 1900-1234</p>
+            </div>
+        </div>
+        <hr class="bg-white-50">
+        <p class="text-center text-white-50">© 2024 Shop. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
