@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard App & Accessibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <h1>⌨️ Keyboard Navigation & Accessibility Demo</h1>
+            <p class="subtitle">Hướng dẫn: ← → để chuyển ảnh | Số 1-5 để nhảy | Space để play/pause | Escape để đóng | Ctrl+K mở Command Palette</p>
+        </header>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2>📸 Image Gallery</h2>
+            
+            <div class="gallery-container">
+                <button 
+                    id="prevBtn" 
+                    class="gallery-nav gallery-prev"
+                    aria-label="Ảnh trước"
+                    title="Previous (← hoặc A key)"
+                >
+                    ◀
+                </button>
+
+                <div class="gallery-display" id="galleryDisplay">
+                    <!-- Image will be rendered here -->
+                </div>
+
+                <button 
+                    id="nextBtn" 
+                    class="gallery-nav gallery-next"
+                    aria-label="Ảnh sau"
+                    title="Next (→ hoặc D key)"
+                >
+                    ▶
+                </button>
+            </div>
+
+            <div class="gallery-controls">
+                <button 
+                    id="playPauseBtn" 
+                    class="control-btn"
+                    aria-label="Play/Pause slideshow"
+                    title="Space key"
+                >
+                    ▶ Play
+                </button>
+                <span id="imageCounter" class="image-counter">1 / 5</span>
+                <div class="image-numbers">
+                    <button 
+                        class="image-btn" 
+                        data-index="0" 
+                        aria-label="Ảnh 1"
+                        title="Press 1"
+                    >1</button>
+                    <button 
+                        class="image-btn" 
+                        data-index="1"
+                        aria-label="Ảnh 2"
+                        title="Press 2"
+                    >2</button>
+                    <button 
+                        class="image-btn" 
+                        data-index="2"
+                        aria-label="Ảnh 3"
+                        title="Press 3"
+                    >3</button>
+                    <button 
+                        class="image-btn" 
+                        data-index="3"
+                        aria-label="Ảnh 4"
+                        title="Press 4"
+                    >4</button>
+                    <button 
+                        class="image-btn" 
+                        data-index="4"
+                        aria-label="Ảnh 5"
+                        title="Press 5"
+                    >5</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Command Palette Section -->
+        <section class="command-section">
+            <h2>💻 Command Palette (Ctrl+K)</h2>
+            <p>Gõ để tìm kiếm commands. Ấn Enter để thực hiện, Escape để đóng.</p>
+            
+            <div class="command-palette-btn" id="commandPaletteBtn" aria-label="Mở Command Palette (Ctrl+K)">
+                🔍 Nhấp hoặc Ctrl+K
+            </div>
+        </section>
+
+        <!-- Keyboard Navigation Guide -->
+        <section class="guide-section">
+            <h2>⌨️ Keyboard Shortcuts Guide</h2>
+            <table class="shortcuts-table">
+                <thead>
+                    <tr>
+                        <th>Phím</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>← / A</td>
+                        <td>Ảnh trước</td>
+                    </tr>
+                    <tr>
+                        <td>→ / D</td>
+                        <td>Ảnh sau</td>
+                    </tr>
+                    <tr>
+                        <td>1-5</td>
+                        <td>Nhảy đến ảnh tương ứng</td>
+                    </tr>
+                    <tr>
+                        <td>Space</td>
+                        <td>Play/Pause slideshow</td>
+                    </tr>
+                    <tr>
+                        <td>Escape</td>
+                        <td>Đóng modal / Command palette</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl+K</td>
+                        <td>Mở Command Palette</td>
+                    </tr>
+                    <tr>
+                        <td>Tab</td>
+                        <td>Di chuyển qua các elements</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <!-- Command Palette Modal -->
+    <div id="commandModal" class="modal hidden">
+        <div class="command-modal-content">
+            <input 
+                type="text" 
+                id="commandInput" 
+                placeholder="Gõ command..."
+                class="command-input"
+                autocomplete="off"
+            >
+            <ul id="commandList" class="command-list">
+                <!-- Commands will be listed here -->
+            </ul>
+            <div class="command-hint">Ấn Enter để chọn, Escape để đóng</div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="modal hidden">
+        <div class="gallery-modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Đóng modal">&times;</button>
+            <div class="gallery-modal-display" id="galleryModalDisplay"></div>
+            <div class="gallery-modal-nav">
+                <button id="modalPrevBtn" class="modal-nav-btn" aria-label="Ảnh trước">◀ Trước</button>
+                <button id="modalNextBtn" class="modal-nav-btn" aria-label="Ảnh sau">Sau ▶</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
