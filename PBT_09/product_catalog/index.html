@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <h1>🛍️ Product Catalog</h1>
+            <div class="header-controls">
+                <button id="darkModeToggle">🌙 Dark Mode</button>
+                <div class="cart-icon">
+                    🛒 <span id="cartCount" class="badge">0</span>
+                </div>
+            </div>
+        </header>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+                <!-- Search -->
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." autocomplete="off">
+                </div>
+
+                <!-- Categories -->
+                <div class="filter-section">
+                    <h3>Danh mục</h3>
+                    <div class="category-buttons">
+                        <button class="category-btn active" data-category="all">Tất cả</button>
+                        <button class="category-btn" data-category="phone">Điện thoại</button>
+                        <button class="category-btn" data-category="laptop">Laptop</button>
+                        <button class="category-btn" data-category="tablet">Tablet</button>
+                        <button class="category-btn" data-category="accessory">Phụ kiện</button>
+                    </div>
+                </div>
+
+                <!-- Sort -->
+                <div class="filter-section">
+                    <h3>Sắp xếp</h3>
+                    <select id="sortSelect">
+                        <option value="default">Mặc định</option>
+                        <option value="price-asc">Giá tăng dần</option>
+                        <option value="price-desc">Giá giảm dần</option>
+                        <option value="name-asc">Tên A-Z</option>
+                        <option value="rating">Đánh giá cao nhất</option>
+                    </select>
+                </div>
+            </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be rendered here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
