@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>📋 Đăng Ký Tài Khoản</h1>
+            
+            <form id="registerForm">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="fullName">Họ và tên</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        placeholder="Nhập họ và tên..."
+                    >
+                    <div class="error-message" id="nameError"></div>
+                    <div class="success-icon" id="nameSuccess">✅</div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Nhập email..."
+                    >
+                    <div class="error-message" id="emailError"></div>
+                    <div class="success-icon" id="emailSuccess">✅</div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Nhập mật khẩu..."
+                    >
+                    <div class="strength-meter">
+                        <div class="strength-meter-fill" id="strengthMeter"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText">Mật khẩu yếu</div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirmPassword">Xác nhận mật khẩu</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        placeholder="Xác nhận mật khẩu..."
+                    >
+                    <div class="error-message" id="confirmError"></div>
+                    <div class="success-icon" id="confirmSuccess">✅</div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        placeholder="Nhập số điện thoại..."
+                    >
+                    <div class="error-message" id="phoneError"></div>
+                    <div class="success-icon" id="phoneSuccess">✅</div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn" class="submit-btn" disabled>
+                    Đăng Ký
+                </button>
+            </form>
+
+            <div class="form-status" id="formStatus"></div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>✅ Đăng Ký Thành Công!</h2>
+            <div id="successInfo"></div>
+            <button class="modal-btn" onclick="closeModal()">Đóng</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
